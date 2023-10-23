@@ -1,0 +1,65 @@
+{
+	"info": {
+		"_postman_id": "c4704fae-e085-4ec6-8ac8-d7f2513929b5",
+		"name": "Jwt",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18532552"
+	},
+	"item": [
+		{
+			"name": "GetDetailsAfterAuthentication",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MSIsImlhdCI6MTY5ODA0NTc4OSwiZXhwIjoxNjk4MDQ5Mzg5fQ.21peGJ6VPD2_721kpB6oZs5_Q5QSwsQ7GdxMGtXFOfmAjjAhggqt5IAJYtIAZppna7blU-afii64PXIYWz_Q1g",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/test/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"test",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GenerateToken",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"test1\",\r\n    \"password\":\"pwd1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
